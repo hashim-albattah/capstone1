@@ -1,21 +1,16 @@
-look at rx and nonrx use of stimulants in minorites compared to whites
+SOCCER
 
-
-compare variables on dependency from diff races
-
-
------
--change numeric values to labels (don't worry about feature engineering, that's for ML)
-	-create function to convert values to string
--comparision of all races
+Idea 1: comparison of diff leagues (la liga vs champions league)
 
 
 
+----
+friend who plays soccer at berkley:
 
+My old coach used to have this thing on his computer where it would tell how many times we crossed like a specific line on the field like trying to score because if we have a lot of possession and don’t score then what’s the point so it would tell us how long we had possession and how many chances we created. If u can find a way to plot things like that, from a coaches perspective or a scout it would greatly benefit them and how they look at the game
 
+can you tell me a little more about those specific lines and their relationships wit possesiom and chances created
 
+So possession keeps track of all the times when u have the ball and so if u create a line like 30 yards from the goal and only look at the possession from when you cross that line you’re closer to the goal so you can focus on when you’re in those spaces and how you get into those spaces and then you can figure out ways of scoring or attacking that are beneficial for the team. It helps so the team can work on scenarios that they face in the game when they cross the desired line to attack
 
-LIMITATIONS
--keep note on subjectivity of results because of amount of white people taking surveys
--minorities not taking as many surveys
-
+Ight bet yeah hit me up whenever and also another thing you could try out is making both horizontal and vertical lines in the attacking third of the field so that it keeps track of when a team attacks through the middle and when a team attacks from the wings to be a little more precise

@@ -1,0 +1,21 @@
+look at rx and nonrx use of stimulants in minorites compared to whites
+
+
+compare variables on dependency from diff races
+
+
+-----
+-change numeric values to labels (don't worry about feature engineering, that's for ML)
+	-create function to convert values to string
+-comparision of all races
+
+
+
+
+
+
+
+LIMITATIONS
+-keep note on subjectivity of results because of amount of white people taking surveys
+-minorities not taking as many surveys
+
