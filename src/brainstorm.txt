@@ -14,3 +14,13 @@ can you tell me a little more about those specific lines and their relationships
 So possession keeps track of all the times when u have the ball and so if u CREATE A LINE LIKE 30 YARDS FROM THE GOAL AND ONLY LOOK AT THE POSSESSION FROM WHEN YOU CROSS THAT LINE YOU’RE CLOSER TO THE GOAL SO YOU CAN FOCUS ON WHEN YOU’RE IN THOSE SPACES AND HOW YOU GET INTO THOSE SPACES and then you can figure out ways of scoring or attacking that are beneficial for the team. It helps so the team can work on scenarios that they face in the game when they cross the desired line to attack
 
 also another thing you could TRY OUT IS MAKING BOTH HORIZONTAL AND VERTICAL LINES IN THE ATTACKING THIRD OF THE FIELD SO THAT IT KEEPS TRACK OF WHEN A TEAM ATTACKS THROUGH THE MIDDLE AND WHEN A TEAM ATTACKS FROM THE WINGS to be a little more precise
+----
+
+-Analysis on possession: Having high possession doesn't necessarily mean advantage, but where on the field possessions are being held the most is important. 
+	-set a threshold for 'attacking','defending','mid' possessions
+
+-assess how possessions and strategy changes as game progress 
+	-maybe comp
+-analyze 'critical' points like emphasis on the attacking region of possession, maybe rey to find the top 5 most successful att:mid:def ratios
+
+-potential linear regression model to assess different factors in possession
