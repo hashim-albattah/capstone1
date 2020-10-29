@@ -24,3 +24,17 @@ also another thing you could TRY OUT IS MAKING BOTH HORIZONTAL AND VERTICAL LINE
 -analyze 'critical' points like emphasis on the attacking region of possession, maybe rey to find the top 5 most successful att:mid:def ratios
 
 -potential linear regression model to assess different factors in possession
+
+-----------WEDNESDay-----
+
+Goal: find out att:mid:def possesions for all teams, aggregated over a heat map for each team in la liga's last season. compare their possession distributions to their rankings. compare top 5 and bottom 5 possession ratios 
+
+Plan:
+    1. query last season of la liga into df
+    2. add column called events that holds events df for that match
+    2. find column names of events and slice out what i need
+        -this would have to be a template/function used for each match
+    3. groupby on team names
+        
+    4. make heat maps for each team of their possesion data from all games
+    
