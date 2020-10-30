@@ -22,15 +22,20 @@ At first, I was looking to aggregate ALL match data, plot possessions by teams, 
 ### My Journey
 As we go through this, you will see how big my scope was at first. Lets follow along what I had ended up doing with the data!
 #### Getting my Data Ready
-1. Imported Essential Libraries. These libraries were used to manipulate the data and create visually-appealing soccer visuals using Seaborn.
+This was the hardest part for me, as I spent most of my time working with the data.
+1. Imported Essential Libraries, like Matplotlib, Pandas, Numpy, and Seaborn. These libraries were used to manipulate the data and create visually-appealing soccer visuals.
 
-2. Created Dictionary with keys as Match IDs and values holding matches dataframes from all available La Liga matches, as the files were only labeled by Match IDs, then I merged all the matches.
+2. Biggest issue was the EDA, as the data provided from StatsBomb was very broken up. It was separated into 3 folders, with match folder containing all the available matches by league_i (found in a seperate single JSON file called 'Competitions'. The other 2 folders, 'events' and 'lineups' were the biggest obstacles because the files were labeled with their Match IDs (found in the Matches JSONs) but the Match ID was not used in the 'events' JSON files.
+
+3. With the help of Jerome, I was able to get a working function to import these files, as they needed to be normalized with pd.json_normalize, which normalizes the semi-structured JSON data into a flat table. And with the help of Jamie, I was able to get to tweak this function to loop through all the JSONs in a specified folder. Using this, i created Dictionary with keys as Match IDs and values holding matches dataframes from all available La Liga matches, as the files were only labeled by Match IDs, then I merged all the matches.
+
+4. I tried this for all the 'events', but this was a ridiculously huge dataset, so I decided to narrow it to just all season for La Liga. Still too big, so I decided to just focus on a single game, and then if time permitted, I would compare them to other matches. I just wanted to get at least SOME data ready.
 
 3. Created dataframe consisting of only La Liga matches in the last season and a list of match ids to be used to select the 'events' JSON files I wanted.
 
 4. Created functions to be used to create a dictionary containing matchids as keys and event data for that match as values. 
 
-5. Created function to create dictionary with tuple of home and away team names as keys and tuple of respective location data throughout that match.
+5. Created function to create dictionary with tuple of home and away team names as keys and tuple of respective location data throughout that match. This made it a lot easier to find the matches I needed, instead of having to find the match_id for that specific match. 
 
 #### Creating Visuals with Prepared Data
 6. Created function called soc_plot_auto_bymatch that contained another function that was found [here](https://towardsdatascience.com/advanced-sports-visualization-with-pandas-matplotlib-and-seaborn-9c16df80a81b) called drawpitch(). Purpose was to automate soccer visualizations. 
