@@ -101,3 +101,13 @@ stats.ttest_ind(barca_goaldists,huesca_goaldists)
 ```
 ## Further Studies / Considerations
 While the possibilities are endless with this dataset, I wanted to maybe look into a match during that season that was more contested, a better match. Huesca was having a really bad season, so it's no surprise they were dominated 8-2. It was also Barcelona's home field, so they had an additional advantage asides from having a stacked lineup. A match of maybe Atletico Madrid vs Valencia might have been nice to analyze similarily and compare to the Barca v Huesca match. In addition, I wanted to look further into how possession changed throughout the game, especially as goals were made. I had a great experience and learned a lot from this capstone. I hope to maybe even expand upon this on my own time, as the resulting visualizations were very satisfying once I was able to get them to work. 
+
+## EXTRA
+I had some time to come up with graphs of Sevilla and Barcelona, as well as ran some statistics:
+![barcasevilla](/src/images/barca_sevilla.png)
+![barcasevilla](/src/images/sevilla_goaldist_distribution_vs_barca.png)
+![barcasevilla](/src/images/barca_goaldist_distribution_vs_sevilla.png)
+![barcasevilla](/src/images/bootstrap_histogram_sev_bar.png)
+
+Here is the T-Test Statistic: -3.887497981178525
+Here is the P-Value: 0.0001031535872268295
