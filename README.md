@@ -39,29 +39,6 @@ This was the hardest part for me, as I spent most of my time working with the da
 
 #### Creating Visuals with Prepared Data
 6. Created function called soc_plot_auto_bymatch that contained another function that was found [here](https://towardsdatascience.com/advanced-sports-visualization-with-pandas-matplotlib-and-seaborn-9c16df80a81b) called drawpitch(). Purpose was to automate soccer visualizations. 
-```python
-def soc_plot_auto_bymatch(d,home,away):
-    fig, axs = plt.subplots(1,2,sharex=True,sharey=True)
-    fig.set_size_inches(14, 5)
-    draw_pitch(axs[0]) #overlay our different objects on the first pitch
-    axs[0].set_ylim(0, 80)
-    axs[0].set_xlim(0, 120)
-    axs[0].get_xaxis().set_visible(False)
-    axs[0].get_yaxis().set_visible(False)
-    axs[0].set_title(home)
-    draw_pitch(axs[1]) #overlay our different objects on the second pitch
-    axs[1].set_ylim(0, 80)
-    axs[1].set_xlim(0, 120)
-    axs[1].get_xaxis().set_visible(False)
-    axs[1].get_yaxis().set_visible(False)
-    axs[1].set_title(away)
-    x_coord1 = [i[0] for i in d[(home,away)][0]]
-    y_coord1 = [i[1] for i in d[(home,away)][0]]
-    x_coord2 = [i[0] for i in d[(home,away)][1]]
-    y_coord2 = [i[1] for i in d[(home,away)][1]]
-    sns.kdeplot(x_coord2, y_coord2, shade = "True", color = "orange", n_levels = 30, ax=axs[1])
-    sns.kdeplot(x_coord1, y_coord1, shade = "True", color = "green", n_levels = 30, ax=axs[0]);
-```
 
 7. Using soc_plot_auto_bymatch(), I plotted the Barcelona v Huesca match. Looking at the distribution of the possessions, Barcelona clearly dominated in the attacking possesions. You can see that a lot of Huesca's possessions lied within the mid-field, probably because they were trying to hold them back as much as they can. It seems like that possessions near goal are more important than possessions elsewhere, in terms of making goals. This might be obvious, but I wanted to test the statistical significance of this. So I decided to look into the Average Distance from Goals, thanks to some guidance from Land. 
 ```python
