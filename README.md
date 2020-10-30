@@ -1,8 +1,13 @@
-Soccer Heatmap Analysis of Soccer Player Coordinates (x,y) during Match Events
+# Soccer Field Heatmap Analysis of Possesion during Barcelona (Home) v Huesca (Away) for La Liga Season 2018-19
 
-## Dataset of different games collected from StatsBomb API. Used StatsBombPy to access data easily through API:
+## Background
 https://github.com/statsbomb/open-data
 https://github.com/statsbomb/statsbombpy
 
-### Ideas
-* Seeing where possesion is focused on when a team is losing early on and later on, whether they are more defensive or agressive in each time. 
+## Data
+
+
+## Exploratory Data Analysis
+
+
+###
