@@ -1,7 +1,8 @@
 # Soccer Field Heatmap Analysis of Possesion during Barcelona (Home) v Huesca (Away) for La Liga Season 2018-19
-## Background
-> Olé, Olé, Olé 
+> ![messi_barca_huesca](https://i.ytimg.com/vi/Ca8K8HObeFI/maxresdefault.jpg)
+> Olé, Olé, Olé, Olé 
 > Fun Fact: Soccer is the only major world sport in which you can't use your hands to manipulate the ball or object of play.
+## Background
 Soccer has been one of the most dominant, if not the most dominant, sports in the in the world. With fans from all over the world, you can only imagine how huge of a fanbase there is. With so many countries involved, we see so many different professional leagues and teams we can count from. I've always been into soccer as a child, but slowed down a lot in college. I've always been a fan of the La Liga, especially when Ronaldo was still in the league competing with Messi. Possession has always been a topic that every coach has emphasized, in my experience. I decided to analyze the biggest win of the 2018-2019 La Liga Season, which was the Barcelona home game against Huesca. The score was 8-2, and clearly Barcelona dominated. I wanted to look into the possessions of these teams and see if I can make some insights. 
 ## Data
 The data was obtained from StatsBomb, which is a company that collects sports data commercially. They have an open data set, of which is open to the public and can be found [here](https://github.com/statsbomb/open-data) on their github repository. It contains a lot of data, but it is split into 4 types of JSON files:
@@ -141,7 +142,7 @@ def soc_plot_auto_bymatch(d,home,away):
 ```python
 soc_plot_auto_bymatch(event_locos_lastseason,'Barcelona','Huesca')
 ```
-[soccer plot of barca v huesca](/src/images/barcelona_v_huesa_2018_2019.png)
+![soccer plot of barca v huesca](/src/images/barcelona_v_huesa_2018_2019.png)
 
 #### Calculated Avergage Distance from Goals using Euclidean Distance.
 ```python
@@ -179,8 +180,8 @@ one_dim_scatterplot(barca_goaldists, ax, s=15)
 fig, ax = plt.subplots(1, figsize=(12, 1))
 one_dim_scatterplot(huesca_goaldists, ax, s=15)
 ```
-[barca goal dist](/src/images/barca_goaldist_distribution.png)
-[huesca goal dist](/src/images/huesca_goaldist_distribution.png)
+![barca goal dist](/src/images/barca_goaldist_distribution.png)
+![huesca goal dist](/src/images/huesca_goaldist_distribution.png)
 
 
 #### Ran a bootstrap to sample the distributions and plotted them. Found that they were not centered around 0, so I wanted to further test this.
@@ -194,7 +195,7 @@ def bootstrap_samples(data,samples):
 fig, ax = plt.subplots(1, figsize=(10, 4))
 ax.hist(mean_diff, bins=50, density=True, color="black", alpha=0.5);
 ```
-[bootstrapping](/src/images/bootstrap_histogram.png)
+![bootstrapping](/src/images/bootstrap_histogram.png)
 #### Ran a t-test and got a T-Test Statistic of -8.042328507143266 and a p-value of 1.1777818632104454e-15
 ```python
 stats.ttest_ind(barca_goaldists,huesca_goaldists)
