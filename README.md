@@ -1,6 +1,7 @@
 # Soccer Field Heatmap Analysis of Possesion during Barcelona (Home) v Huesca (Away) for La Liga Season 2018-19
 > ![messi_barca_huesca](https://i.ytimg.com/vi/Ca8K8HObeFI/maxresdefault.jpg)
-> Olé, Olé, Olé, Olé 
+> Olé, Olé, Olé, Olé
+
 > Fun Fact: Soccer is the only major world sport in which you can't use your hands to manipulate the ball or object of play.
 ## Background
 Soccer has been one of the most dominant, if not the most dominant, sports in the in the world. With fans from all over the world, you can only imagine how huge of a fanbase there is. With so many countries involved, we see so many different professional leagues and teams we can count from. I've always been into soccer as a child, but slowed down a lot in college. I've always been a fan of the La Liga, especially when Ronaldo was still in the league competing with Messi. Possession has always been a topic that every coach has emphasized, in my experience. I decided to analyze the biggest win of the 2018-2019 La Liga Season, which was the Barcelona home game against Huesca. The score was 8-2, and clearly Barcelona dominated. I wanted to look into the possessions of these teams and see if I can make some insights. 
