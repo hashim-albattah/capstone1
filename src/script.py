@@ -106,3 +106,47 @@ def auto_matchlist_locations(match_ids):
         d[(home,away)] = (home_loc,away_loc)
     return d
 event_locos_lastseason = auto_matchlist_locations(laliga_matchids)
+
+
+
+#use numpy method for euclidean disctance, then loop on it through every (x,y) point for the specific map, accumulate, and divide by len() of the iteration
+#### COORDINATES FOR GOAL ARE: (120,40)
+goal_loc = np.array([120,40])
+#barca vs huesca... this is the BIGGEST HOME WIN of the season
+#barca loop
+barca_accum = []
+for i in event_locos_lastseason[('Barcelona','Huesca')][0]:
+    barca_accum.append(np.linalg.norm(goal_loc - np.array(i)))
+barca_goaldists = np.array(barca_accum)
+#huesca loop
+huesca_accum = []
+for i in event_locos_lastseason[('Barcelona','Huesca')][1]:
+    huesca_accum.append(np.linalg.norm(goal_loc - np.array(i)))
+huesca_goaldists = np.array(huesca_accum)
+
+
+
+
+
+def one_dim_scatterplot(data, ax, jitter=0.2, **options):
+    ## why jitter? especially for bootstraping later
+    if jitter:
+        jitter = np.random.uniform(-jitter, jitter, size=data.shape)
+    else:
+        jitter = np.repeat(0.0, len(data))
+    ax.scatter(data, jitter, **options)
+    ax.yaxis.set_ticklabels([])
+    ax.set_ylim([-0.24, 0.24])
+    ax.tick_params(axis='both', which='major', labelsize=15)
+    
+    
+    
+    
+fig, ax = plt.subplots(1, figsize=(12, 1))
+one_dim_scatterplot(barca_goaldists, ax, s=15)
+
+
+
+
+fig, ax = plt.subplots(1, figsize=(12, 1))
+one_dim_scatterplot(huesca_goaldists, ax, s=15)

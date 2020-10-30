@@ -1,8 +1,0 @@
-variables of interest (randomly ordered):
-
-competition_id:
-16 = Champions
-11 = La Liga
-    
-season_id:
-(2009/2010 - 2018/2019)4,1,2,27,26,25,24,23,22,21
